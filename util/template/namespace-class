@@ -1,16 +1,16 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch\Namespaces;
+namespace Elasticsearch76\Namespaces;
 
-use Elasticsearch\Namespaces\AbstractNamespace;
+use Elasticsearch76\Namespaces\AbstractNamespace;
 
 /**
  * Class :namespace
  * Generated running $ php util/GenerateEndpoints.php :version
  *
- * @category Elasticsearch
- * @package  Elasticsearch\Namespaces
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\Namespaces
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

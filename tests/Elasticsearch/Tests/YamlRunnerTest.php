@@ -2,18 +2,18 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Tests;
+namespace Elasticsearch76\Tests;
 
 use Doctrine\Common\Inflector\Inflector;
-use Elasticsearch;
-use Elasticsearch\Common\Exceptions\BadRequest400Exception;
-use Elasticsearch\Common\Exceptions\Conflict409Exception;
-use Elasticsearch\Common\Exceptions\Forbidden403Exception;
-use Elasticsearch\Common\Exceptions\Missing404Exception;
-use Elasticsearch\Common\Exceptions\RequestTimeout408Exception;
-use Elasticsearch\Common\Exceptions\ServerErrorResponseException;
-use Elasticsearch\Common\Exceptions\RoutingMissingException;
-use Elasticsearch\Common\Exceptions\Unauthorized401Exception;
+use Elasticsearch76;
+use Elasticsearch76\Common\Exceptions\BadRequest400Exception;
+use Elasticsearch76\Common\Exceptions\Conflict409Exception;
+use Elasticsearch76\Common\Exceptions\Forbidden403Exception;
+use Elasticsearch76\Common\Exceptions\Missing404Exception;
+use Elasticsearch76\Common\Exceptions\RequestTimeout408Exception;
+use Elasticsearch76\Common\Exceptions\ServerErrorResponseException;
+use Elasticsearch76\Common\Exceptions\RoutingMissingException;
+use Elasticsearch76\Common\Exceptions\Unauthorized401Exception;
 use GuzzleHttp\Ring\Future\FutureArrayInterface;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -26,7 +26,7 @@ use Symfony\Component\Yaml\Yaml;
  * Class YamlRunnerTest
  *
  * @category   Tests
- * @package    Elasticsearch
+ * @package    Elasticsearch76
  * @subpackage Tests
  * @author     Zachary Tong <zachary.tong@elasticsearch.com>
  * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache2
@@ -40,7 +40,7 @@ class YamlRunnerTest extends \PHPUnit\Framework\TestCase
     private $yaml;
 
     /**
-     * @var \Elasticsearch\Client client used by elasticsearch
+     * @var \Elasticsearch76\Client client used by elasticsearch
      */
     private $client;
 
@@ -138,7 +138,7 @@ class YamlRunnerTest extends \PHPUnit\Framework\TestCase
 
     public function setUp()
     {
-        $this->client = Elasticsearch\ClientBuilder::create()
+        $this->client = Elasticsearch76\ClientBuilder::create()
             ->setHosts([self::getHost()])
             ->build();
     }
@@ -380,7 +380,7 @@ class YamlRunnerTest extends \PHPUnit\Framework\TestCase
         }
 
         // TODO remove this after cat testing situation resolved
-        if ($caller instanceof Elasticsearch\Namespaces\CatNamespace) {
+        if ($caller instanceof Elasticsearch76\Namespaces\CatNamespace) {
             if (!isset($endpointParams->format)) {
                 $endpointParams->format = 'text';
             }
@@ -717,7 +717,7 @@ class YamlRunnerTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Skip an operation depending on Elasticsearch Version
+     * Skip an operation depending on Elasticsearch76 Version
      *
      * @param \stdClass         &object              $operation
      * @param array|string|null $lastOperationResult

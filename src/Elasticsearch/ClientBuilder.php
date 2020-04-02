@@ -2,23 +2,23 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch;
+namespace Elasticsearch76;
 
-use Elasticsearch\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch\Common\Exceptions\RuntimeException;
-use Elasticsearch\Common\Exceptions\ElasticCloudIdParseException;
-use Elasticsearch\Common\Exceptions\AuthenticationConfigException;
-use Elasticsearch\ConnectionPool\AbstractConnectionPool;
-use Elasticsearch\ConnectionPool\Selectors\RoundRobinSelector;
-use Elasticsearch\ConnectionPool\Selectors\SelectorInterface;
-use Elasticsearch\ConnectionPool\StaticNoPingConnectionPool;
-use Elasticsearch\Connections\Connection;
-use Elasticsearch\Connections\ConnectionFactory;
-use Elasticsearch\Connections\ConnectionFactoryInterface;
-use Elasticsearch\Namespaces\NamespaceBuilderInterface;
-use Elasticsearch\Serializers\SerializerInterface;
-use Elasticsearch\ConnectionPool\Selectors;
-use Elasticsearch\Serializers\SmartSerializer;
+use Elasticsearch76\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch76\Common\Exceptions\RuntimeException;
+use Elasticsearch76\Common\Exceptions\ElasticCloudIdParseException;
+use Elasticsearch76\Common\Exceptions\AuthenticationConfigException;
+use Elasticsearch76\ConnectionPool\AbstractConnectionPool;
+use Elasticsearch76\ConnectionPool\Selectors\RoundRobinSelector;
+use Elasticsearch76\ConnectionPool\Selectors\SelectorInterface;
+use Elasticsearch76\ConnectionPool\StaticNoPingConnectionPool;
+use Elasticsearch76\Connections\Connection;
+use Elasticsearch76\Connections\ConnectionFactory;
+use Elasticsearch76\Connections\ConnectionFactoryInterface;
+use Elasticsearch76\Namespaces\NamespaceBuilderInterface;
+use Elasticsearch76\Serializers\SerializerInterface;
+use Elasticsearch76\ConnectionPool\Selectors;
+use Elasticsearch76\Serializers\SmartSerializer;
 use GuzzleHttp\Ring\Client\CurlHandler;
 use GuzzleHttp\Ring\Client\CurlMultiHandler;
 use GuzzleHttp\Ring\Client\Middleware;
@@ -28,8 +28,8 @@ use Psr\Log\NullLogger;
 /**
  * Class ClientBuilder
  *
- * @category Elasticsearch
- * @package  Elasticsearch\Common\Exceptions
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\Common\Exceptions
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
@@ -211,7 +211,7 @@ class ClientBuilder
                 $default = new CurlMultiHandler($config);
             }
         } else {
-            throw new \RuntimeException('Elasticsearch-PHP requires cURL, or a custom HTTP handler.');
+            throw new \RuntimeException('Elasticsearch76-PHP requires cURL, or a custom HTTP handler.');
         }
 
         return $future ? Middleware::wrapFuture($default, $future) : $default;
@@ -321,7 +321,7 @@ class ClientBuilder
     }
 
     /**
-     * @param \Elasticsearch\Serializers\SerializerInterface|string $serializer
+     * @param \Elasticsearch76\Serializers\SerializerInterface|string $serializer
      */
     public function setSerializer($serializer): ClientBuilder
     {
@@ -424,7 +424,7 @@ class ClientBuilder
     }
 
     /**
-     * @param \Elasticsearch\ConnectionPool\Selectors\SelectorInterface|string $selector
+     * @param \Elasticsearch76\ConnectionPool\Selectors\SelectorInterface|string $selector
      */
     public function setSelector($selector): ClientBuilder
     {
@@ -559,7 +559,7 @@ class ClientBuilder
             $serializer = $this->serializer;
 
             $this->endpoint = function ($class) use ($serializer) {
-                $fullPath = '\\Elasticsearch\\Endpoints\\' . $class;
+                $fullPath = '\\Elasticsearch76\\Endpoints\\' . $class;
                 if ($class === 'Bulk' || $class === 'Msearch' || $class === 'MsearchTemplate' || $class === 'MPercolate') {
                     return new $fullPath($serializer);
                 } else {
@@ -641,7 +641,7 @@ class ClientBuilder
     }
 
     /**
-     * @return \Elasticsearch\Connections\Connection[]
+     * @return \Elasticsearch76\Connections\Connection[]
      * @throws RuntimeException
      */
     private function buildConnectionsFromHosts(array $hosts): array

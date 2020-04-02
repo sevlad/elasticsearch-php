@@ -1,17 +1,17 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Cluster;
+namespace Elasticsearch76\Endpoints\Cluster;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch76\Endpoints\AbstractEndpoint;
 
 /**
  * Class Reroute
- * Elasticsearch API name cluster.reroute
+ * Elasticsearch76 API name cluster.reroute
  * Generated running $ php util/GenerateEndpoints.php 7.6.0
  *
- * @category Elasticsearch
- * @package  Elasticsearch\Endpoints\Cluster
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\Endpoints\Cluster
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

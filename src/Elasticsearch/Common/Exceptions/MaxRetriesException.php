@@ -2,17 +2,17 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Common\Exceptions;
+namespace Elasticsearch76\Common\Exceptions;
 
 /**
  * MaxRetriesException
  *
- * @category Elasticsearch
- * @package  Elasticsearch\Common\Exceptions
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\Common\Exceptions
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
  */
-class MaxRetriesException extends TransportException implements ElasticsearchException
+class MaxRetriesException extends TransportException implements Elasticsearch76Exception
 {
 }

@@ -2,19 +2,19 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Tests\Helper\Iterators;
+namespace Elasticsearch76\Tests\Helper\Iterators;
 
-use Elasticsearch\Helper\Iterators\SearchHitIterator;
-use Elasticsearch\Helper\Iterators\SearchResponseIterator;
+use Elasticsearch76\Helper\Iterators\SearchHitIterator;
+use Elasticsearch76\Helper\Iterators\SearchResponseIterator;
 use Mockery;
 
 /**
  * Class SearchResponseIteratorTest
  *
- * @package Elasticsearch\Tests\Helper\Iterators
+ * @package Elasticsearch76\Tests\Helper\Iterators
  * @author  Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license http://www.apache.org/licenses/LICENSE-2.0 Apache2
- * @link    http://Elasticsearch.org
+ * @link    http://Elasticsearch76.org
  */
 class SearchHitIteratorTest extends \PHPUnit\Framework\TestCase
 {

@@ -2,20 +2,20 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Tests;
+namespace Elasticsearch76\Tests;
 
-use Elasticsearch;
-use Elasticsearch\ClientBuilder;
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Serializers\SerializerInterface;
-use Elasticsearch\Transport;
+use Elasticsearch76;
+use Elasticsearch76\ClientBuilder;
+use Elasticsearch76\Endpoints\AbstractEndpoint;
+use Elasticsearch76\Serializers\SerializerInterface;
+use Elasticsearch76\Transport;
 use Mockery as m;
 
 /**
  * Class RegisteredNamespaceTest
  *
  * @category   Tests
- * @package    Elasticsearch
+ * @package    Elasticsearch76
  * @subpackage Tests
  * @author     Zachary Tong <zachary.tong@elasticsearch.com>
  * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache2
@@ -40,7 +40,7 @@ class RegisteredNamespaceTest extends \PHPUnit\Framework\TestCase
         $builder = new FooNamespaceBuilder();
         $client = ClientBuilder::create()->registerNamespace($builder)->build();
 
-        $this->expectException(\Elasticsearch\Common\Exceptions\BadMethodCallException::class);
+        $this->expectException(\Elasticsearch76\Common\Exceptions\BadMethodCallException::class);
         $this->expectExceptionMessage('Namespace [bar] not found');
 
         $client->bar()->fooMethod();
@@ -48,7 +48,7 @@ class RegisteredNamespaceTest extends \PHPUnit\Framework\TestCase
 }
 
 // @codingStandardsIgnoreStart "Each class must be in a file by itself" - not worth the extra work here
-class FooNamespaceBuilder implements Elasticsearch\Namespaces\NamespaceBuilderInterface
+class FooNamespaceBuilder implements Elasticsearch76\Namespaces\NamespaceBuilderInterface
 {
     public function getName(): string
     {

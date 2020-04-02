@@ -2,15 +2,15 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\ConnectionPool\Selectors;
+namespace Elasticsearch76\ConnectionPool\Selectors;
 
-use Elasticsearch\Connections\ConnectionInterface;
+use Elasticsearch76\Connections\ConnectionInterface;
 
 /**
  * Class StickyRoundRobinSelector
  *
- * @category Elasticsearch
- * @package  Elasticsearch\ConnectionPool\Selectors\ConnectionPool
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\ConnectionPool\Selectors\ConnectionPool
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

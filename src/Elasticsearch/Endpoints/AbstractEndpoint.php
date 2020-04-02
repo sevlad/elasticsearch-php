@@ -2,19 +2,19 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints;
+namespace Elasticsearch76\Endpoints;
 
-use Elasticsearch\Common\Exceptions\UnexpectedValueException;
-use Elasticsearch\Serializers\SerializerInterface;
-use Elasticsearch\Transport;
+use Elasticsearch76\Common\Exceptions\UnexpectedValueException;
+use Elasticsearch76\Serializers\SerializerInterface;
+use Elasticsearch76\Transport;
 use Exception;
 use GuzzleHttp\Ring\Future\FutureArrayInterface;
 
 /**
  * Class AbstractEndpoint
  *
- * @category Elasticsearch
- * @package  Elasticsearch\Endpoints
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\Endpoints
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

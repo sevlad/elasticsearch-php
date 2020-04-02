@@ -2,19 +2,19 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Namespaces;
+namespace Elasticsearch76\Namespaces;
 
-use Elasticsearch\Common\Exceptions\Missing404Exception;
-use Elasticsearch\Common\Exceptions\RoutingMissingException;
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Transport;
+use Elasticsearch76\Common\Exceptions\Missing404Exception;
+use Elasticsearch76\Common\Exceptions\RoutingMissingException;
+use Elasticsearch76\Endpoints\AbstractEndpoint;
+use Elasticsearch76\Transport;
 use GuzzleHttp\Ring\Future\FutureArrayInterface;
 
 /**
  * Trait AbstractNamespace
  *
- * @category Elasticsearch
- * @package  Elasticsearch\Namespaces
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\Namespaces
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

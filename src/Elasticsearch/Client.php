@@ -1,31 +1,31 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch;
+namespace Elasticsearch76;
 
-use Elasticsearch\Common\Exceptions\BadMethodCallException;
-use Elasticsearch\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch\Common\Exceptions\NoNodesAvailableException;
-use Elasticsearch\Common\Exceptions\BadRequest400Exception;
-use Elasticsearch\Common\Exceptions\Missing404Exception;
-use Elasticsearch\Common\Exceptions\TransportException;
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Namespaces\AbstractNamespace;
-use Elasticsearch\Namespaces\NamespaceBuilderInterface;
-use Elasticsearch\Namespaces\BooleanRequestWrapper;
-use Elasticsearch\Namespaces\CatNamespace;
-use Elasticsearch\Namespaces\ClusterNamespace;
-use Elasticsearch\Namespaces\IndicesNamespace;
-use Elasticsearch\Namespaces\IngestNamespace;
-use Elasticsearch\Namespaces\NodesNamespace;
-use Elasticsearch\Namespaces\SnapshotNamespace;
-use Elasticsearch\Namespaces\TasksNamespace;
+use Elasticsearch76\Common\Exceptions\BadMethodCallException;
+use Elasticsearch76\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch76\Common\Exceptions\NoNodesAvailableException;
+use Elasticsearch76\Common\Exceptions\BadRequest400Exception;
+use Elasticsearch76\Common\Exceptions\Missing404Exception;
+use Elasticsearch76\Common\Exceptions\TransportException;
+use Elasticsearch76\Endpoints\AbstractEndpoint;
+use Elasticsearch76\Namespaces\AbstractNamespace;
+use Elasticsearch76\Namespaces\NamespaceBuilderInterface;
+use Elasticsearch76\Namespaces\BooleanRequestWrapper;
+use Elasticsearch76\Namespaces\CatNamespace;
+use Elasticsearch76\Namespaces\ClusterNamespace;
+use Elasticsearch76\Namespaces\IndicesNamespace;
+use Elasticsearch76\Namespaces\IngestNamespace;
+use Elasticsearch76\Namespaces\NodesNamespace;
+use Elasticsearch76\Namespaces\SnapshotNamespace;
+use Elasticsearch76\Namespaces\TasksNamespace;
 
 /**
  * Class Client
  *
- * @category Elasticsearch
- * @package  Elasticsearch
+ * @category Elasticsearch76
+ * @package  Elasticsearch76
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

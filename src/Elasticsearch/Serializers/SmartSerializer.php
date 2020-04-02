@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Serializers;
+namespace Elasticsearch76\Serializers;
 
-use Elasticsearch\Common\Exceptions;
-use Elasticsearch\Common\Exceptions\Serializer\JsonErrorException;
+use Elasticsearch76\Common\Exceptions;
+use Elasticsearch76\Common\Exceptions\Serializer\JsonErrorException;
 
 if (!defined('JSON_INVALID_UTF8_SUBSTITUTE')) {
     //PHP < 7.2 Define it as 0 so it does nothing
@@ -15,8 +15,8 @@ if (!defined('JSON_INVALID_UTF8_SUBSTITUTE')) {
 /**
  * Class SmartSerializer
  *
- * @category Elasticsearch
- * @package  Elasticsearch\Serializers\JSONSerializer
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\Serializers\JSONSerializer
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

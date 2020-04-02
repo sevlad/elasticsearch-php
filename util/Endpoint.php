@@ -6,7 +6,7 @@
  */
 declare(strict_types = 1);
 
-namespace Elasticsearch\Util;
+namespace Elasticsearch76\Util;
 
 use Exception;
 
@@ -53,7 +53,7 @@ class Endpoint
     /**
      * @param $fileName name of the file with the API specification
      * @param $content content of the API specification in JSON
-     * @param $version Elasticsearch version of the API specification
+     * @param $version Elasticsearch76 version of the API specification
      */
     public function __construct(string $fileName, string $content, string $version)
     {
@@ -233,7 +233,7 @@ class Endpoint
                         $this->name,
                         str_replace(':part', $part, $skeleton)
                     );
-                    $this->addNamespace('Elasticsearch\Common\Exceptions\RuntimeException');
+                    $this->addNamespace('Elasticsearch76\Common\Exceptions\RuntimeException');
                 } else {
                     $params .= sprintf("%s\$%s = \$this->%s ?? null;\n", $tab8, $part, $part);
                 }
@@ -295,7 +295,7 @@ class Endpoint
                 $tab8,
                 $this->apiName
             );
-            $this->addNamespace('Elasticsearch\Common\Exceptions\RuntimeException');
+            $this->addNamespace('Elasticsearch76\Common\Exceptions\RuntimeException');
         }
         return $checkPart . $params . $deprecated . $urls . $else;
     }
@@ -376,7 +376,7 @@ class Endpoint
     private function getSetBulkBody(): string
     {
         $setPart = file_get_contents(self::SET_BULK_BODY_TEMPLATE);
-        $this->addNamespace('Elasticsearch\Common\Exceptions\InvalidArgumentException');
+        $this->addNamespace('Elasticsearch76\Common\Exceptions\InvalidArgumentException');
 
         return str_replace(':endpoint', $this->getClassName(), $setPart);
     }

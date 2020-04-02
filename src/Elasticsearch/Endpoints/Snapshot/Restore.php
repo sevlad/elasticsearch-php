@@ -1,18 +1,18 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Snapshot;
+namespace Elasticsearch76\Endpoints\Snapshot;
 
-use Elasticsearch\Common\Exceptions\RuntimeException;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch76\Common\Exceptions\RuntimeException;
+use Elasticsearch76\Endpoints\AbstractEndpoint;
 
 /**
  * Class Restore
- * Elasticsearch API name snapshot.restore
+ * Elasticsearch76 API name snapshot.restore
  * Generated running $ php util/GenerateEndpoints.php 7.6.0
  *
- * @category Elasticsearch
- * @package  Elasticsearch\Endpoints\Snapshot
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\Endpoints\Snapshot
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

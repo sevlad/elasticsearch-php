@@ -1,15 +1,15 @@
 <?php
 /**
- * Generate the Elasticsearch endpoints and namespaces
+ * Generate the Elasticsearch76 endpoints and namespaces
  *
  * @author Enrico Zimuel (enrico.zimuel@elastic.co)
  */
 declare(strict_types = 1);
 
 use GitWrapper\GitWrapper;
-use Elasticsearch\Util\ClientEndpoint;
-use Elasticsearch\Util\Endpoint;
-use Elasticsearch\Util\NamespaceEndpoint;
+use Elasticsearch76\Util\ClientEndpoint;
+use Elasticsearch76\Util\Endpoint;
+use Elasticsearch76\Util\NamespaceEndpoint;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
@@ -122,7 +122,7 @@ printf("\nGenerated %d endpoints and %d namespaces in %.3f seconds\n.", $countEn
 function print_usage_msg(): void
 {
     printf("Usage: php %s <ES_VERSION>\n", basename(__FILE__));
-    printf("where <ES_VERSION> is the Elasticsearch version to check. The version must be >= 7.4.0.\n");
+    printf("where <ES_VERSION> is the Elasticsearch76 version to check. The version must be >= 7.4.0.\n");
 }
 
 // Remove directory recursively

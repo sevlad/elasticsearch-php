@@ -2,20 +2,20 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Tests;
+namespace Elasticsearch76\Tests;
 
-use Elasticsearch\Client;
-use Elasticsearch\ClientBuilder;
-use Elasticsearch\Common\Exceptions\ElasticsearchException;
-use Elasticsearch\Common\Exceptions\Missing404Exception;
-use Elasticsearch\Tests\ClientBuilder\ArrayLogger;
+use Elasticsearch76\Client;
+use Elasticsearch76\ClientBuilder;
+use Elasticsearch76\Common\Exceptions\Elasticsearch76Exception;
+use Elasticsearch76\Common\Exceptions\Missing404Exception;
+use Elasticsearch76\Tests\ClientBuilder\ArrayLogger;
 use Psr\Log\LogLevel;
 
 /**
  * Class ClientTest
  *
  * @category   Tests
- * @package    Elasticsearch
+ * @package    Elasticsearch76
  * @subpackage Tests
  * @author     Zachary Tong <zachary.tong@elasticsearch.com>
  * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache2

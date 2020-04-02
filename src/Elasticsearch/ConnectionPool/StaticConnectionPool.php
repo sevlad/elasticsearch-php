@@ -2,13 +2,13 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\ConnectionPool;
+namespace Elasticsearch76\ConnectionPool;
 
-use Elasticsearch\Common\Exceptions\NoNodesAvailableException;
-use Elasticsearch\ConnectionPool\Selectors\SelectorInterface;
-use Elasticsearch\Connections\Connection;
-use Elasticsearch\Connections\ConnectionInterface;
-use Elasticsearch\Connections\ConnectionFactoryInterface;
+use Elasticsearch76\Common\Exceptions\NoNodesAvailableException;
+use Elasticsearch76\ConnectionPool\Selectors\SelectorInterface;
+use Elasticsearch76\Connections\Connection;
+use Elasticsearch76\Connections\ConnectionInterface;
+use Elasticsearch76\Connections\ConnectionFactoryInterface;
 
 class StaticConnectionPool extends AbstractConnectionPool implements ConnectionPoolInterface
 {

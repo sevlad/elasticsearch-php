@@ -6,7 +6,7 @@
 */
 declare(strict_types = 1);
 
-namespace Elasticsearch\Util;
+namespace Elasticsearch76\Util;
 
 use Exception;
 
@@ -21,7 +21,7 @@ class NamespaceEndpoint
     protected $name;
     protected $endpoints = [];
     protected $endpointNames = [];
-    protected $version; /* Elasticsearch version used to generate the class */
+    protected $version; /* Elasticsearch76 version used to generate the class */
 
     public function __construct(string $name, string $version)
     {

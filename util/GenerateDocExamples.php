@@ -8,7 +8,7 @@ declare(strict_types = 1);
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-use Elasticsearch\Common\Exceptions\ElasticsearchException;
+use Elasticsearch76\Common\Exceptions\Elasticsearch76Exception;
 
 $fileToParse = require 'examples_to_parse.php';
 if (empty($fileToParse)) {
@@ -157,15 +157,15 @@ function normalizeApiName(string $api): string
 }
 
 /**
- * Check if the generated code has a valid PHP syntax using Elasticsearch\Client
+ * Check if the generated code has a valid PHP syntax using Elasticsearch76\Client
  */
 function checkIfCodeHasValidSyntax(string $code): void
 {
     $script = sprintf("require_once '%s/vendor/autoload.php';\n", dirname(__DIR__));
-    $script .= '$client = Elasticsearch\ClientBuilder::create()->build();' . "\n";
+    $script .= '$client = Elasticsearch76\ClientBuilder::create()->build();' . "\n";
     try {
         eval($script . $code);
-    } catch (ElasticsearchException $e) {
+    } catch (Elasticsearch76Exception $e) {
     } catch (Error $e) {
         throw new Exception(sprintf(
             "The generated code:\n%s\nhas the following parse error:\n%s",

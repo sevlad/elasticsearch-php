@@ -2,15 +2,15 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\ConnectionPool;
+namespace Elasticsearch76\ConnectionPool;
 
-use Elasticsearch\Connections\ConnectionInterface;
+use Elasticsearch76\Connections\ConnectionInterface;
 
 /**
  * ConnectionPoolInterface
  *
- * @category Elasticsearch
- * @package  Elasticsearch\ConnectionPool
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\ConnectionPool
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

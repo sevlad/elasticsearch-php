@@ -2,20 +2,20 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Common\Exceptions\Curl;
+namespace Elasticsearch76\Common\Exceptions\Curl;
 
-use Elasticsearch\Common\Exceptions\ElasticsearchException;
-use Elasticsearch\Common\Exceptions\TransportException;
+use Elasticsearch76\Common\Exceptions\Elasticsearch76Exception;
+use Elasticsearch76\Common\Exceptions\TransportException;
 
 /**
  * Class OperationTimeoutException
  *
- * @category Elasticsearch
- * @package  Elasticsearch\Common\Exceptions\Curl
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\Common\Exceptions\Curl
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
  */
-class OperationTimeoutException extends TransportException implements ElasticsearchException
+class OperationTimeoutException extends TransportException implements Elasticsearch76Exception
 {
 }

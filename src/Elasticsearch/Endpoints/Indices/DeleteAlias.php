@@ -1,18 +1,18 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Indices;
+namespace Elasticsearch76\Endpoints\Indices;
 
-use Elasticsearch\Common\Exceptions\RuntimeException;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch76\Common\Exceptions\RuntimeException;
+use Elasticsearch76\Endpoints\AbstractEndpoint;
 
 /**
  * Class DeleteAlias
- * Elasticsearch API name indices.delete_alias
+ * Elasticsearch76 API name indices.delete_alias
  * Generated running $ php util/GenerateEndpoints.php 7.6.0
  *
- * @category Elasticsearch
- * @package  Elasticsearch\Endpoints\Indices
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\Endpoints\Indices
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

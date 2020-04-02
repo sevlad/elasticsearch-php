@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Common;
+namespace Elasticsearch76\Common;
 
 use Psr\Log\AbstractLogger;
 use Psr\Log\LoggerInterface;
@@ -13,8 +13,8 @@ use Psr\Log\LoggerInterface;
  * Logger that doesn't do anything.  Similar to Monolog's NullHandler,
  * but avoids the overhead of partially loading Monolog
  *
- * @category Elasticsearch
- * @package  Elasticsearch\Common
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\Common
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

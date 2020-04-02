@@ -2,20 +2,20 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Tests\ConnectionPool;
+namespace Elasticsearch76\Tests\ConnectionPool;
 
-use Elasticsearch;
-use Elasticsearch\ConnectionPool\Selectors\RoundRobinSelector;
-use Elasticsearch\ConnectionPool\StaticConnectionPool;
-use Elasticsearch\Connections\Connection;
-use Elasticsearch\Connections\ConnectionFactory;
+use Elasticsearch76;
+use Elasticsearch76\ConnectionPool\Selectors\RoundRobinSelector;
+use Elasticsearch76\ConnectionPool\StaticConnectionPool;
+use Elasticsearch76\Connections\Connection;
+use Elasticsearch76\Connections\ConnectionFactory;
 use Mockery as m;
 
 /**
  * Class StaticConnectionPoolTest
  *
  * @category   Tests
- * @package    Elasticsearch
+ * @package    Elasticsearch76
  * @subpackage Tests/StaticConnectionPoolTest
  * @author     Zachary Tong <zachary.tong@elasticsearch.com>
  * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache2
@@ -40,7 +40,7 @@ class StaticConnectionPoolTest extends \PHPUnit\Framework\TestCase
             ->shouldReceive('markDead')->once()->getMock();
 
         /**
- * @var \Elasticsearch\Connections\Connection[]&\Mockery\MockInterface[] $connections
+ * @var \Elasticsearch76\Connections\Connection[]&\Mockery\MockInterface[] $connections
 */
         $connections = [$mockConnection];
 
@@ -126,7 +126,7 @@ class StaticConnectionPoolTest extends \PHPUnit\Framework\TestCase
         ];
         $connectionPool = new StaticConnectionPool($connections, $selector, $connectionFactory, $connectionPoolParams);
 
-        $this->expectException(\Elasticsearch\Common\Exceptions\NoNodesAvailableException::class);
+        $this->expectException(\Elasticsearch76\Common\Exceptions\NoNodesAvailableException::class);
         $this->expectExceptionMessage('No alive nodes found in your cluster');
 
         $connectionPool->nextConnection();
@@ -230,14 +230,14 @@ class StaticConnectionPoolTest extends \PHPUnit\Framework\TestCase
 
     public function testCustomConnectionPoolIT()
     {
-        $clientBuilder = \Elasticsearch\ClientBuilder::create();
+        $clientBuilder = \Elasticsearch76\ClientBuilder::create();
         $clientBuilder->setHosts(['localhost:1']);
         $client = $clientBuilder
             ->setRetries(0)
             ->setConnectionPool(StaticConnectionPool::class, [])
             ->build();
 
-        $this->expectException(Elasticsearch\Common\Exceptions\NoNodesAvailableException::class);
+        $this->expectException(Elasticsearch76\Common\Exceptions\NoNodesAvailableException::class);
         $this->expectExceptionMessage('No alive nodes found in your cluster');
 
         $client->search([]);

@@ -6,7 +6,7 @@
  */
 declare(strict_types = 1);
 
-namespace Elasticsearch\Util;
+namespace Elasticsearch76\Util;
 
 use Exception;
 
@@ -20,7 +20,7 @@ class ClientEndpoint extends NamespaceEndpoint
     protected $endpoints = [];
     protected $endpointNames = [];
     protected $namespace = [];
-    protected $version; /* Elasticsearch version used to generate the class */
+    protected $version; /* Elasticsearch76 version used to generate the class */
 
     public function __construct(array $namespace, string $version)
     {
@@ -40,7 +40,7 @@ class ClientEndpoint extends NamespaceEndpoint
             if (empty($name)) {
                 continue;
             }
-            $useNamespace .= sprintf("use Elasticsearch\Namespaces\%sNamespace;\n", ucfirst($name));
+            $useNamespace .= sprintf("use Elasticsearch76\Namespaces\%sNamespace;\n", ucfirst($name));
         }
         $class = str_replace(':use-namespaces', $useNamespace, $class);
 

@@ -1,6 +1,6 @@
 {
-  "name": "elasticsearch/elasticsearch",
-  "description": "PHP Client for Elasticsearch",
+  "name": "sevlad/elasticsearch76",
+  "description": "PHP Client for Elasticsearch76",
   "keywords": ["search","client", "elasticsearch"],
   "type": "library",
   "license": "Apache-2.0",
@@ -37,14 +37,14 @@
       "src/autoload.php"
     ],
     "psr-4": {
-      "Elasticsearch\\": "src/Elasticsearch/"
+      "Elasticsearch76\\": "src/Elasticsearch/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Elasticsearch\\Tests\\": "tests/Elasticsearch/Tests/",
-      "Elasticsearch\\IntegrationTests\\": "tests/Elasticsearch/IntegrationTests/",
-      "Elasticsearch\\Util\\": "util/"
+      "Elasticsearch76\\Tests\\": "tests/Elasticsearch/Tests/",
+      "Elasticsearch76\\IntegrationTests\\": "tests/Elasticsearch/IntegrationTests/",
+      "Elasticsearch76\\Util\\": "util/"
     }
   },
   "config": {

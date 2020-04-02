@@ -1,17 +1,17 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints:namespace;
+namespace Elasticsearch76\Endpoints:namespace;
 :use-namespace
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch76\Endpoints\AbstractEndpoint;
 
 /**
  * Class :endpoint
- * Elasticsearch API name :apiname
+ * Elasticsearch76 API name :apiname
  * Generated running $ php util/GenerateEndpoints.php :version
  *
- * @category Elasticsearch
- * @package  Elasticsearch\Endpoints:namespace
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\Endpoints:namespace
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

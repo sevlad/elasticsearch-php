@@ -1,17 +1,17 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Tasks;
+namespace Elasticsearch76\Endpoints\Tasks;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch76\Endpoints\AbstractEndpoint;
 
 /**
  * Class ListTasks
- * Elasticsearch API name tasks.list
+ * Elasticsearch76 API name tasks.list
  * Generated running $ php util/GenerateEndpoints.php 7.6.0
  *
- * @category Elasticsearch
- * @package  Elasticsearch\Endpoints\Tasks
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\Endpoints\Tasks
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

@@ -2,20 +2,20 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch;
+namespace Elasticsearch76;
 
-use Elasticsearch\Common\Exceptions;
-use Elasticsearch\ConnectionPool\AbstractConnectionPool;
-use Elasticsearch\Connections\Connection;
-use Elasticsearch\Connections\ConnectionInterface;
+use Elasticsearch76\Common\Exceptions;
+use Elasticsearch76\ConnectionPool\AbstractConnectionPool;
+use Elasticsearch76\Connections\Connection;
+use Elasticsearch76\Connections\ConnectionInterface;
 use GuzzleHttp\Ring\Future\FutureArrayInterface;
 use Psr\Log\LoggerInterface;
 
 /**
  * Class Transport
  *
- * @category Elasticsearch
- * @package  Elasticsearch
+ * @category Elasticsearch76
+ * @package  Elasticsearch76
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

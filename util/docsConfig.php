@@ -16,7 +16,7 @@ $iterator = Finder::create()
 return new Sami($iterator, [
     'theme'                => 'asciidoc',
     'template_dirs'        => [__DIR__.'/docstheme/'],
-    'title'                => 'Elasticsearch-php',
+    'title'                => 'Elasticsearch76-php',
     'build_dir'            => __DIR__.'/../docs/build',
     'cache_dir'            => __DIR__.'/cache/',
 ]);

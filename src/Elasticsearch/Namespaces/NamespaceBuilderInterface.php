@@ -4,17 +4,17 @@ declare(strict_types = 1);
 /**
  * Class RegisteredNamespaceInterface
  *
- * @category Elasticsearch
- * @package  Elasticsearch\Namespaces
+ * @category Elasticsearch76
+ * @package  Elasticsearch76\Namespaces
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
  */
 
-namespace Elasticsearch\Namespaces;
+namespace Elasticsearch76\Namespaces;
 
-use Elasticsearch\Serializers\SerializerInterface;
-use Elasticsearch\Transport;
+use Elasticsearch76\Serializers\SerializerInterface;
+use Elasticsearch76\Transport;
 
 interface NamespaceBuilderInterface
 {

@@ -2,13 +2,13 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Tests;
+namespace Elasticsearch76\Tests;
 
-use Elasticsearch\Client;
-use Elasticsearch\ClientBuilder;
-use Elasticsearch\Common\Exceptions\ElasticsearchException;
-use Elasticsearch\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch\Tests\ClientBuilder\DummyLogger;
+use Elasticsearch76\Client;
+use Elasticsearch76\ClientBuilder;
+use Elasticsearch76\Common\Exceptions\Elasticsearch76Exception;
+use Elasticsearch76\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch76\Tests\ClientBuilder\DummyLogger;
 use GuzzleHttp\Ring\Client\MockHandler;
 use PHPUnit\Framework\TestCase;
 
@@ -40,7 +40,7 @@ class ClientBuilderTest extends TestCase
         
         try {
             $result = $client->info();
-        } catch (ElasticsearchException $e) {
+        } catch (Elasticsearch76Exception $e) {
             $request = $client->transport->getLastConnection()->getLastRequestInfo();
             $this->assertContains('gzip', $request['request']['client']['curl']);
         }
@@ -64,7 +64,7 @@ class ClientBuilderTest extends TestCase
         
         try {
             $result = $client->info();
-        } catch (ElasticsearchException $e) {
+        } catch (Elasticsearch76Exception $e) {
             $request = $client->transport->getLastConnection()->getLastRequestInfo();
             $this->assertContains('deflate', $request['request']['client']['curl']);
             $this->assertNotContains('gzip', $request['request']['client']['curl']);
@@ -93,7 +93,7 @@ class ClientBuilderTest extends TestCase
 
         try {
             $result = $client->info();
-        } catch (ElasticsearchException $e) {
+        } catch (Elasticsearch76Exception $e) {
             $request = $client->transport->getLastConnection()->getLastRequestInfo();
             $this->assertTrue(isset($request['request']['headers']['Host'][0]));
             $this->assertEquals($url, $request['request']['headers']['Host'][0]);
@@ -121,7 +121,7 @@ class ClientBuilderTest extends TestCase
 
         try {
             $result = $client->info();
-        } catch (ElasticsearchException $e) {
+        } catch (Elasticsearch76Exception $e) {
             $request = $client->transport->getLastConnection()->getLastRequestInfo();
             $this->assertTrue(isset($request['request']['headers']['Host'][0]));
             $this->assertEquals($host, $request['request']['headers']['Host'][0]);
@@ -150,7 +150,7 @@ class ClientBuilderTest extends TestCase
 
         try {
             $result = $client->info();
-        } catch (ElasticsearchException $e) {
+        } catch (Elasticsearch76Exception $e) {
             $request = $client->transport->getLastConnection()->getLastRequestInfo();
             $this->assertTrue(isset($request['request']['headers']['Host'][0]));
             $this->assertEquals($host, $request['request']['headers']['Host'][0]);
