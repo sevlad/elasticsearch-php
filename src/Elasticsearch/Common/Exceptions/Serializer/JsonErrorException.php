@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Elasticsearch76\Common\Exceptions\Serializer;
 
-use Elasticsearch76\Common\Exceptions\Elasticsearch76Exception;
+use Elasticsearch76\Common\Exceptions\ElasticsearchException;
 
 /**
  * Class JsonErrorException
@@ -15,7 +15,7 @@ use Elasticsearch76\Common\Exceptions\Elasticsearch76Exception;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
  */
-class JsonErrorException extends \Exception implements Elasticsearch76Exception
+class JsonErrorException extends \Exception implements ElasticsearchException
 {
     /**
      * @var mixed

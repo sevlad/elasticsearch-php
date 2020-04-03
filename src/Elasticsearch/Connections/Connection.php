@@ -10,7 +10,7 @@ use Elasticsearch76\Common\Exceptions\Conflict409Exception;
 use Elasticsearch76\Common\Exceptions\Curl\CouldNotConnectToHost;
 use Elasticsearch76\Common\Exceptions\Curl\CouldNotResolveHostException;
 use Elasticsearch76\Common\Exceptions\Curl\OperationTimeoutException;
-use Elasticsearch76\Common\Exceptions\Elasticsearch76Exception;
+use Elasticsearch76\Common\Exceptions\ElasticsearchException;
 use Elasticsearch76\Common\Exceptions\Forbidden403Exception;
 use Elasticsearch76\Common\Exceptions\MaxRetriesException;
 use Elasticsearch76\Common\Exceptions\Missing404Exception;
@@ -542,7 +542,7 @@ class Connection implements ConnectionInterface
         return $this->port;
     }
 
-    protected function getCurlRetryException(array $request, array $response): Elasticsearch76Exception
+    protected function getCurlRetryException(array $request, array $response): ElasticsearchException
     {
         $exception = null;
         $message = $response['error']->getMessage();
@@ -599,7 +599,7 @@ class Connection implements ConnectionInterface
         return $curlCommand;
     }
 
-    private function process4xxError(array $request, array $response, array $ignore): ?Elasticsearch76Exception
+    private function process4xxError(array $request, array $response, array $ignore): ?ElasticsearchException
     {
         $statusCode = $response['status'];
         $responseBody = $response['body'];
@@ -637,7 +637,7 @@ class Connection implements ConnectionInterface
         throw $exception;
     }
 
-    private function process5xxError(array $request, array $response, array $ignore): ?Elasticsearch76Exception
+    private function process5xxError(array $request, array $response, array $ignore): ?ElasticsearchException
     {
         $statusCode = (int) $response['status'];
         $responseBody = $response['body'];
@@ -670,17 +670,17 @@ class Connection implements ConnectionInterface
         throw $exception;
     }
 
-    private function tryDeserialize400Error(array $response): Elasticsearch76Exception
+    private function tryDeserialize400Error(array $response): ElasticsearchException
     {
         return $this->tryDeserializeError($response, BadRequest400Exception::class);
     }
 
-    private function tryDeserialize500Error(array $response): Elasticsearch76Exception
+    private function tryDeserialize500Error(array $response): ElasticsearchException
     {
         return $this->tryDeserializeError($response, ServerErrorResponseException::class);
     }
 
-    private function tryDeserializeError(array $response, string $errorClass): Elasticsearch76Exception
+    private function tryDeserializeError(array $response, string $errorClass): ElasticsearchException
     {
         $error = $this->serializer->deserialize($response['body'], $response['transfer_stats']);
         if (is_array($error) === true) {

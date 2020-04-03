@@ -6,7 +6,7 @@ namespace Elasticsearch76\Tests;
 
 use Elasticsearch76\Client;
 use Elasticsearch76\ClientBuilder;
-use Elasticsearch76\Common\Exceptions\Elasticsearch76Exception;
+use Elasticsearch76\Common\Exceptions\ElasticsearchException;
 use Elasticsearch76\Common\Exceptions\Missing404Exception;
 use Elasticsearch76\Tests\ClientBuilder\ArrayLogger;
 use Psr\Log\LogLevel;

@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Elasticsearch76\Common\Exceptions\Curl;
 
-use Elasticsearch76\Common\Exceptions\Elasticsearch76Exception;
+use Elasticsearch76\Common\Exceptions\ElasticsearchException;
 use Elasticsearch76\Common\Exceptions\TransportException;
 
 /**
@@ -16,6 +16,6 @@ use Elasticsearch76\Common\Exceptions\TransportException;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
  */
-class CouldNotConnectToHost extends TransportException implements Elasticsearch76Exception
+class CouldNotConnectToHost extends TransportException implements ElasticsearchException
 {
 }

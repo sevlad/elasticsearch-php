@@ -13,6 +13,6 @@ namespace Elasticsearch76\Common\Exceptions;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
  */
-class Missing404Exception extends \Exception implements Elasticsearch76Exception
+class Missing404Exception extends \Exception implements ElasticsearchException
 {
 }

@@ -13,6 +13,6 @@ namespace Elasticsearch76\Common\Exceptions;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
  */
-class BadRequest400Exception extends \Exception implements Elasticsearch76Exception
+class BadRequest400Exception extends \Exception implements ElasticsearchException
 {
 }

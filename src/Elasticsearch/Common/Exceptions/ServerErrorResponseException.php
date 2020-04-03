@@ -13,6 +13,6 @@ namespace Elasticsearch76\Common\Exceptions;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
  */
-class ServerErrorResponseException extends TransportException implements Elasticsearch76Exception
+class ServerErrorResponseException extends TransportException implements ElasticsearchException
 {
 }
